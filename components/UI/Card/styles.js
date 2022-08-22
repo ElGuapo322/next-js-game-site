@@ -7,16 +7,13 @@ export const CardBox = styled.div`
     cursor: pointer;
     margin: 0.6rem;
     display: flex;
+    width: calc(100% - 1.2rem);
     -webkit-box-shadow: 5px 5px 16px 0px rgba(246, 248, 249, 0.6);
     -moz-box-shadow: 5px 5px 16px 0px rgba(246, 248, 249, 0.6);
     box-shadow: 5px 5px 16px 0px rgba(246, 248, 249, 0.6);
     transition: all 0.25s ease;
     &:hover{
         transform: scale(1.1)
-    }
-
-    @media (min-width: 10rem) {
-        width: calc(100% - 1.2rem);
     }
 
     @media (min-width: 40rem) {

@@ -24,12 +24,12 @@ export default function Home() {
 
 
     useEffect(() => {
-        let timeoutId
+        let timeout
 
          if (isMounted) {
             setOffset(1)
             dispatch(clearList())
-            timeoutId = setTimeout(
+            timeout = setTimeout(
                 () =>
                     dispatch(
                         getGamesList({
@@ -47,7 +47,7 @@ export default function Home() {
         } else isMounted.current=true
 
         return () => {
-            clearTimeout(timeoutId)
+            clearTimeout(timeout)
             dispatch(clearList())
         }
     }, [parameters])

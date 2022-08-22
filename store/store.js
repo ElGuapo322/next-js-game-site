@@ -21,9 +21,11 @@ const masterReducer = (state, action) =>{
     }else return combinedReducer(state, action)
 }
 
+const store = configureStore({
+    reducer: masterReducer
+}, )
+
 export const makeStore = () => {
-   return configureStore({
-        reducer: masterReducer
-    }, )
+   return store
 }
 export const wrapper = createWrapper(makeStore)

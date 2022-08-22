@@ -27,10 +27,13 @@ export const ContentHeader = styled.div`
 `
 export const Filters = styled.div`
     display: flex;
-
-    @media (max-width: 33rem) {
-        flex-direction: column;
-        justify-content: space-between;
-        height: 7.5rem;
+    gap: 7px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 7.5rem;
+  
+    @media (min-width: 33rem) {
+        flex-direction: row;
+        //height: 7.5rem;
     }
 `
