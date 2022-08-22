@@ -9,16 +9,10 @@ import Spinner from "../public/icons/Spinner"
 
 
 export default function details({ query }) {
-    const state = useSelector(state=>state)
+     const state = useSelector(state=>state)
     return (
         <GlobalLayout>
-            {!state.gameSlice.oneGame.slug ? (
-                <Spinner style={{margin: '30% 50%'}}/>
-            ) :(
-                <GameDetails game={state.gameSlice.oneGame} screenshots={state.gameSlice.screenshots} />
-            )
-            }
-            
+             <GameDetails game={state.gameSlice.oneGame} screenshots={state.gameSlice.screenshots} />
         </GlobalLayout>
     )
 }
